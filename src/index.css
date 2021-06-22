@@ -1,13 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+  box-sizing: border-box;
+}
 body {
+
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #22254b;
+}
+.root{
+  display: flex;
+  flex-direction: column;
+}
+header{
+  background-color: #373b69;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.search{
+  background-color: transparent;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  color: #22254b;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+}
+.movie-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie{
+  background-color: #373b69;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 300px;
+}
+.movie img{
+  max-width: 100%;
+}
+.movie-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.movie-info h3{
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.movie-over{
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  padding: 1rem;
+  bottom: 0;
+  right: 0;
+  left:0;
+  background-color: #fff;
+  color: #22254b;
+  overflow: auto;
+  max-height: 100%;
+  transform: translateY(102%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover .movie-over{
+  transform: translateY(0%);
 }
