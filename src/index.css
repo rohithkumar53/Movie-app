@@ -33,6 +33,7 @@ header{
 }
 .movie-container{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .movie{
@@ -76,4 +77,19 @@ header{
 
 .movie:hover .movie-over{
   transform: translateY(0%);
+}
+.tag{
+  background-color: #22254b;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+.tag.green{
+  color: rgb(5, 184, 5);
+}
+.tag.orange{
+  color: orange;
+}
+.tag.red{
+  color: red;
 }
